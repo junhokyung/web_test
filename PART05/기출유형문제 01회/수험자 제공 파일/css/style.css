@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+#header_wapper{width: 960px;height: 150px;margin:0 auto;}
+.main_menu img{width: 290px;height: 119px;}
+.main_menu{}
+.main_menu ul{float: right;width: 600px;}
+.main_menu ul li{float: left;width:33.33%;line-height: 30px;text-align: center;border-right: 1px solid #000;margin-top: 50px;}
+.main_menu ul li:last-child{border:0;}
+.main_menu ul li a{}
