@@ -6,6 +6,12 @@ img{display: block;}
 .logo{float: left;width: 200px;height: 100px;background: skyblue;}
 .menu{float: left;width: 1000px;height: 100px;background: blue;}
 
+.menu{padding-top: 50px;}
+.menu>ul{float: right;width: 600px;}
+.menu>ul>li{float: left;width: 200px;height: 50px;line-height: 50px;background-color: skyblue;display: block;cursor: pointer;text-align: center;position: relative;}
+
+.sub_menu1{position: absolute;z-index: 4;background-color: #ccc;display: none;}
+.sub_menu1 li{width: 200px;height: 50px;}
 
 /*
 #banner{height: 360px;background: #222;}

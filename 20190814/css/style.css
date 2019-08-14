@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#wrap{width: 1000px;height: 1000px;background-color: #ccc;margin: 0 auto;}
+#header{background:#fff;height: 100px;}
+#banner{}
+#content1{}
+#content2{}
+#footer{}
+
+/*header*/
+#header h1{float: left;}
+#header h1 img{width: 130px;}
+#header .nav{float: right;}
+#header .nav ul{}
+#header .nav li{float: left;}
+#header .nav li a{display: block;padding: 40px 15px;}
