@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/*wrap*/
+#wrap{width: 1200px;margin: 0 auto;}
+
+/*header*/
+#header{height: 100px;}
+.logo{width: 200px;height: 100px;background-color: #222;float: left;}
+.main_menu{float: left;width: 1000px;height: 100px;background-color: #333;}
+.menu{margin-top: 50px;}
+.menu ul{float: right;}
+.menu li{float: left;width:150px;height: 50px;background-color: lightpink;line-height: 50px;text-align: center;position: relative;}
+.menu li a{display: block;}
+.submenu{z-index: 9999;position: absolute;display: none;}
+.submenu li:hover{background-color: hotpink;color:#fff;}
+
+/*banner*/
+#banner{height: 360px;background-color: #444;overflow: hidden;}
+#banner ul{position: relative;}
+#banner ul li{position: absolute;}
+#banner ul li:nth-child(1){z-index: 1;}
+/*#banner ul li:nth-child(2){z-index: 1;}*/
+/*contents*/
+#contents{height: 200px;}
+.cont1{float: left;width:400px;height: 200px;background-color: #555;}
+.cont2{float: left;width:400px;height: 200px;background-color: #666;}
+.cont3{float: left;width:400px;height: 200px;background-color: #777;}
+
+
+
+/*footer*/
+#footer{height: 100px;}
+.ft_logo{float: left;width: 100px;height: 100px;background-color: #888;}
+.copy{float: left;width: 1000px;height: 100px;background-color: #999;}
+.sns{float: left;width: 100px;height: 100px;background-color: #888;}
