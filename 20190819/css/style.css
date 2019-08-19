@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+#wrap{width: 1200px;margin:0 auto;position: relative;}
+
+/*header*/
+#header{height: 100px;background-color: yellowgreen;}
+.logo{float: left;width: 300px;height: 100px;background-color:forestgreen;}
+.main_menu{float: left;}
+.menu{width: 900px;}
+.menu>ul{float: right;width: 404px;height: 50px;background-color: green;margin-top: 50px;}
+.menu>ul>li{float: left;position: relative;width: 100px;text-align: center;line-height: 50px;border-right: 1px solid #fff;font-weight: bold;}
+.menu>ul>li>a{color:#fff;display: block;}
+.menu>ul>li:hover{background-color: darkgreen;color:#fff;}
+
+.sub_menu{display: none;position: absolute;background-color: green;cursor: pointer;z-index: 4;}
+.sub_menu li{width: 100px;}
+.sub_menu li:hover{background-color: darkgreen;}
+.sub_menu a{display: block;}
+/*banner*/
+#banner{height: 360px;background-color: greenyellow;position: relative;overflow: hidden;}
+.slide{width: 1200px;height: 360px;}
+.slide>ul{position: absolute;top: 0;}
+.slide>ul:nth-child(1){z-index: 3;}
+.slide>ul:nth-child(2){z-index: 2;}
+/*contents*/
+#contents{height: 200px;background-color: yellow;}
+.cont1{float: left;width:400px;height: 200px;background-color: gold;}
+.cont1>ul>li{float: left;width: 99.2px;height: 40px;border-right: 1px solid #000;background-color: #fff;text-align: center;line-height: 40px;cursor: pointer}
+.cont1>ul>li.active{background-color: gold;}
+.cont1>ul>li:hover{background-color: gold;}
+.cont1>ul>li:last-child{border-right: none;}
+.cont1 div li:nth-child(2){display: none;}
+.cont1 div li:nth-child(3){display: none;}
+.cont1 div li:nth-child(4){display: none;}
+
+
+.cont2{float: left;width: 33.33%;height: 200px;background-color: goldenrod}
+
+.cont3{float: left;width: 33.33%;height: 200px;background-color: orange;}
+.popup{width: 500px;height: 500px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);background-color: greenyellow;z-index: 5;display: none;z-index: 7;}
+.popup h1{padding: 30px;}
+.popup p{text-align: center;padding: 30px;}
+
+.close{
+    position: absolute;width: 50px;height: 50px;line-height: 50px;right: 0;bottom: 0;border: 1px solid #000;cursor: pointer;background-color: #fff;text-align: center;}
+.box{width: 100%;height: 100%;z-index: 6;background-color: rgba(0,0,0,0.3);position: absolute;top: 0;display: none;}
+/*footer*/
+#footer{height: 100px;background-color: green;}
+.foot1{float: left;width: 200px;height: 100px;background-color: forestgreen;}
+.foot2{float: left;width: 800px;height: 100px;background-color:yellow;}
+.foot3{float: left;width: 200px;height: 100px;background-color: green;}
