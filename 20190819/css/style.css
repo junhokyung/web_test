@@ -16,6 +16,11 @@
 .sub_menu li{width: 100px;}
 .sub_menu li:hover{background-color: darkgreen;}
 .sub_menu a{display: block;}
+
+.sbox{display: none;width: 1200px;height: 200px;position: absolute;background-color: darkgreen;top: 100px;left: 0;z-index: 4}
+
+
+
 /*banner*/
 #banner{height: 360px;background-color: greenyellow;position: relative;overflow: hidden;}
 .slide{width: 1200px;height: 360px;}

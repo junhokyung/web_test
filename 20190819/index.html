@@ -12,6 +12,7 @@
         <header id="header" class="clearfix">
             <div class="logo">LOGO</div>
             <div class="main_menu">
+               <div class="sbox"></div>
                 <div class="menu">
                     <ul>
                         <li><a href="#">menu1</a>
@@ -105,10 +106,17 @@
   
    
     <script>
-        $(".menu>ul>li").mouseover(function(){
-            $(this).find(".sub_menu").stop().slideDown(500)
+//        $(".menu>ul>li").mouseover(function(){
+//            $(this).find(".sub_menu").stop().slideDown(500)
+//        }).mouseout(function(){
+//             $(this).find(".sub_menu").stop().slideUp();
+//        });
+         $(".menu>ul>li").mouseover(function(){
+            $(".sub_menu").stop().slideDown(500)
+            $(".sbox").stop().slideDown(500)
         }).mouseout(function(){
-             $(this).find(".sub_menu").hide();
+            $(".sub_menu").stop().slideUp();
+            $(".sbox").stop().slideUp();
         });
         
         var current = 0;
@@ -130,8 +138,6 @@
             $(".popup").show();
             $(".box").show();            
         });
-       
-            
         $(".close").click(function(){
             $(".popup").hide();
             $(".box").hide();
