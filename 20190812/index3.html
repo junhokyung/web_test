@@ -47,21 +47,21 @@
 				current = 2;
 				i=0;
 			}
-			console.log(i);
+//			console.log(i);
 			var current1 = $(".slide>ul>li").eq(current);
 			var next = $(".slide>ul>li").eq(i);
-			current1.css({left:0}).stop().animate({left:-1200});
-			next.css({left:1200}).stop().animate({left:0});
+			current1.css({top:0}).stop().animate({top:-360});
+			next.css({top:360}).stop().animate({top:0});
 			current = i;
 		}
 	setInterval(slider3,3000);
 		
-		var i = $(this).index();
+
 		$(".menu>ul>li").mouseover(function(){
-			$(".sub_menu1>li").eq(i).show();
+			$(this).find(".sub_menu1").show();
 		});
 		$(".menu>ul>li").mouseout(function(){
-		$(".sub_menu1>li").eq(i).hide();
+            $(this).find(".sub_menu1").hide();
 		});
 	});
 	
@@ -75,25 +75,25 @@
             <div class="menu">
             	<ul>
             		<li><a href="#">menu1</a>
-									<ul class="sub_menu1">
-										<li>menu1</li>
-										<li>menu2</li>
-										<li>menu3</li>
-									</ul>
+                        <ul class="sub_menu1">
+                            <li>menu1</li>
+                            <li>menu2</li>
+                            <li>menu3</li>
+                        </ul>
             		</li>
             		<li><a href="#">menu2</a>
-            				<ul class="sub_menu1">
-											<li>menu1</li>
-											<li>menu2</li>
-											<li>menu3</li>
-									</ul>
-            		</li>
+                        <ul class="sub_menu1">
+                            <li>menu1</li>
+                            <li>menu2</li>
+                            <li>menu3</li>
+                        </ul>
+                </li>
             		<li><a href="#">menu3</a>
-            				<ul class="sub_menu1">
-											<li>menu1</li>
-											<li>menu2</li>
-											<li>menu3</li>
-									</ul>
+                        <ul class="sub_menu1">
+                            <li>menu1</li>
+                            <li>menu2</li>
+                            <li>menu3</li>
+                        </ul>
             		</li>
             	</ul>
             </div>
