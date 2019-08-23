@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/*wrap*/
+#wrap{width: 1200px;margin: 0 auto;position: relative;}
+
+/*header*/
+#header{height: 100px;}
+.logo{width: 200px;height: 100px;background-color: #222;float: left;}
+.main_menu{float: left;width: 1000px;height: 100px;background-color: #333;}
+.menu{margin-top: 50px;}
+.menu ul{float: right;}
+.menu li{float: left;width:150px;height: 50px;background-color: lightpink;line-height: 50px;text-align: center;position: relative;}
+.menu li a{display: block;}
+.submenu{z-index: 9999;position: absolute;display: none;}
+.submenu li:hover{background-color: hotpink;color:#fff;}
+
+/*banner*/
+#banner{height: 360px;overflow: hidden;}
+.slider{position: relative;}
+.slider li{position: absolute;}
+.slider li:nth-child(1){z-index: 3;}
+.slider li:nth-child(2){z-index: 2;}
+
+
+/*contents*/
+#contents{height: 200px;}
+.cont1{float: left;width: 400px;height: 200px;position: relative;background-color: #222;}
+.tab{float: left;width: 100px;height: 200px;}
+.tab h2{width: 100px;height: 40px;background-color: lightpink;text-align: center;}
+.tab p{position: absolute;top: 40px;left: 0;text-align: center;display: none;}
+.tab h2:hover{background-color: #fff;color:pink;}
+.tab.active h2{background-color: #fff;color:pink;}
+.tab.active p{display: block;}
+
+.cont2{float: left;width:400px;height: 200px;background-color: #666;}
+.cont3{float: left;width:400px;height: 200px;background-color: #777;display: block;}
+
+.popup{width: 500px;height: 500px;position: absolute;top: 50%;left: 50%;background-color: skyblue;transform: translate(-50%,-50%);z-index: 5555;display: none;}
+.close{width: 80px;height: 50px;color:#fff;position: absolute;right: 0;bottom: 0;border:1px solid blue;text-align: center;line-height: 50px;cursor: pointer;}
+.box{width: 100%;height: 100%;position: absolute;top: 0;background-color: rgba(0,0,0,0.5);z-index: 9;display: none;}
+
+/*footer*/
+#footer{height: 100px;}
+.ft_logo{float: left;width: 100px;height: 100px;background-color: #888;}
+.copy{float: left;width: 1000px;height: 100px;background-color: #999;}
+.sns{float: left;width: 100px;height: 100px;background-color: #888;}

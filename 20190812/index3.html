@@ -25,7 +25,7 @@
 //        var current=0;
 //        var i;
 //        function slide(){
-//            i=current+1;
+//            i=current+1; 
 //            if(i==3){
 //            current = 2;
 //            i=0;
@@ -63,9 +63,16 @@
 		$(".menu>ul>li").mouseout(function(){
             $(this).find(".sub_menu1").hide();
 		});
+        
+        $(".menu>ul>li").mouseover(function(){
+           $(this).find(".sub_menu1").stop().slideDown();
+        });
+        $(".menu>ul>li").mouseout(function(){
+           $(this).find(".sub_menu1").stop().slideUp();
+        });
 	});
 	
-	
+
 </script>
 </head>
 <body>

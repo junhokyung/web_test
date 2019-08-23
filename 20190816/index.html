@@ -1,0 +1,164 @@
+<! DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>title</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min_1.12.4.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="clearfix">
+            <div class="logo">LOGO</div>
+            <div class="main_menu">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">menu1</a>
+                            <ul class="submenu">
+                                <li>menu1</li>
+                                <li>menu2</li>
+                                <li>menu3</li>
+                                <li>menu4</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">menu2</a>
+                             <ul class="submenu">
+                                <li>menu1</li>
+                                <li>menu2</li>
+                                <li>menu3</li>
+                                <li>menu4</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">menu3</a>
+                             <ul class="submenu">
+                                <li>menu1</li>
+                                <li>menu2</li>
+                                <li>menu3</li>
+                                <li>menu4</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">menu4</a>
+                             <ul class="submenu">
+                                <li>menu1</li>
+                                <li>menu2</li>
+                                <li>menu3</li>
+                                <li>menu4</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>    
+        <section id="banner">
+            <ul class="slider">
+                <li><img src="img/ban01.jpg" alt=""></li>
+                <li><img src="img/ban02.jpg" alt=""></li>
+                <li><img src="img/ban03.jpg" alt=""></li>
+            </ul>
+        </section>
+        <section id="contents" class="clearfix">
+            <div class="cont1">
+            <div class="tab active">
+            <h2>동</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sequi suscipit, explicabo impedit tenetur nulla error eveniet assumenda consequatur, maxime!</p>
+        </div>
+        <div class="tab">
+            <h2>방</h2>
+            <p>Aliquam voluptatibus distinctio assumenda deleniti iure voluptas est sint fugit, magni consectetur, at excepturi vitae dolorum, dignissimos corporis architecto quibusdam.</p>
+        </div>
+        <div class="tab">
+            <h2>신</h2>
+            <p>Quo blanditiis asperiores velit, facilis sint veritatis a unde harum recusandae? Maxime perferendis officia cum perspiciatis similique vitae, saepe fugit.</p>
+        </div>
+        <div class="tab">
+            <h2>기</h2>
+            <p>Molestias quos tenetur ipsa tempora consectetur delectus, ullam fugit. Atque pariatur quae quasi odio quam sapiente cupiditate blanditiis aperiam vero.</p>
+        </div>
+      </div>
+					</div>
+            <div class="cont2">2222</div>
+            <div class="cont3">팝업</div> 
+            <div class="popup">팝업
+            	<ul class="close">닫기</ul>
+            </div>
+        </section>
+        <footer id="footer" class="clearfix">
+            <div class="ft_logo">LOGO</div>
+            <div class="copy">COPY</div>
+            <div class="sns">SNS</div>
+        </footer>
+    </div>
+    
+    <div class="box"></div>
+    
+    <script>
+			var current =0;
+			var i;
+			
+			function slide(){
+				i = current+1;
+				if(i == 3){
+					current = 2;
+					i = 0;
+				}
+				console.log(i)
+//				$(".slider>li").eq(current).css({left:0}).stop().animate({left:-1200});
+//				$(".slider>li").eq(i).css({left:1200}).stop().animate({left:0});
+				$(".slider>li").eq(current).fadeOut();
+				$(".slider>li").eq(i).fadeIn();
+				
+				current = i;
+			}
+			setInterval(slide,3000);
+			
+			
+			
+        $(".menu>ul>li").mouseover(function(){
+            $(this).find(".submenu").stop().slideDown(200);
+        });
+         $(".menu>ul>li").mouseout(function(){
+            $(this).find(".submenu").stop().slideUp(200);
+        });
+			
+			
+			   $(".cont3").click(function(){
+            $(".popup").show();
+					 $(".box").show();
+        });
+				$(".close").click(function(){
+            $(".popup").hide();
+						$(".box").hide();
+						
+        });
+			$(".con_menu").click(function(){
+					var p = $(this).index();
+					$(".con_menu").removeClass();
+					$(".con_menu").eq(p).addClass();
+				})
+//         $(".menu>ul>li").mouseout(function(){
+//            $(this).find(".submenu").stop().slideUp(200);
+//        });
+//        
+//        var current = 0;
+//        var i;
+//
+//        function slide(){
+//            i = current+1;
+//            if(i == 3){
+//                current=2;
+//                i=0
+//            }
+//            $(".slider>li").eq(current).css({top:0}).stop().animate({top:-360});
+//            $(".slider>li").eq(i)	.css({top:360}).stop().animate({top:0});
+//            current = i;
+//        }
+//        setInterval(slide,3000);
+			
+			
+    </script>
+</body>
+</html>
+
+

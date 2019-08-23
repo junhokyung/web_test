@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>document</title> 
+    <link rel="stylesheet" href="css/reset.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min_1.12.4.js"></script>
+</head>
+<body>
+  <div id="wrap">
+        <header id="header" class="clearfix">
+            <div class="logo">LOGO</div>
+            <div class="main_menu">
+               <div class="sbox"></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">menu1</a>
+                            <div class="sub_menu">
+                                <ul>
+                                    <li>menu1</li>
+                                    <li>menu2</li>
+                                    <li>menu3</li>
+                                    <li>menu4</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">menu2</a>
+                             <div class="sub_menu">
+                                <ul>
+                                    <li>menu1</li>
+                                    <li>menu2</li>
+                                    <li>menu3</li>
+                                    <li>menu4</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">menu3</a>
+                             <div class="sub_menu">
+                                <ul>
+                                    <li>menu1</li>
+                                    <li>menu2</li>
+                                    <li>menu3</li>
+                                    <li>menu4</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">menu4</a>
+                             <div class="sub_menu">
+                                <ul>
+                                    <li>menu1</li>
+                                    <li>menu2</li>
+                                    <li>menu3</li>
+                                    <li>menu4</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section id="banner">
+            <div class="slide">
+                <ul>
+                    <li><img src="img/ban01.jpg" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="img/ban02.jpg" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="img/ban03.jpg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+        <section id="contents" class="clearfix">
+            <div class="cont1">
+                <ul>
+                    <li class="active">menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                </ul>
+                 <div class="txt">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ab.</li>
+                    <li>Eaque explicabo reprehenderit distinctio repellat voluptatum modi aperiam, praesentium architecto.</li>
+                    <li>Odio adipisci suscipit ipsam repudiandae maiores repellat est, dolore iure.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, earum!</li>
+                </div>
+            </div>
+           
+            <div class="cont2">갤러리</div>
+            <div class="cont3">팝업</div>
+                <div class="popup">
+                    <h1>팝업</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi ipsam delectus eaque error nesciunt perferendis consectetur, adipisci labore, incidunt porro dolorem vitae quas, earum sit inventore, quos autem ratione consequuntur pariatur hic maiores. Adipisci, distinctio perferendis illo totam minus. Quia, aliquam! Consequatur rem molestiae ducimus aliquid, velit eius nulla perferendis?</p>
+                    <div class="close">닫기</div>
+                </div>
+        </section>
+        <footer id="footer" class="clearfix">
+            <div class="foot1">LOGO</div>
+            <div class="foot2">copy</div>
+            <div class="foot3">sns</div>
+        </footer>
+    </div>
+    <div class="box"></div>
+  
+   
+    <script>
+//        $(".menu>ul>li").mouseover(function(){
+//            $(this).find(".sub_menu").stop().slideDown(500)
+//        }).mouseout(function(){
+//             $(this).find(".sub_menu").stop().slideUp();
+//        });
+         $(".menu>ul>li").mouseover(function(){
+            $(".sub_menu").stop().slideDown(500)
+            $(".sbox").stop().slideDown(500)
+        }).mouseout(function(){
+            $(".sub_menu").stop().slideUp();
+            $(".sbox").stop().slideUp();
+        });
+        
+        var current = 0;
+        var i;
+        
+        function slide(){
+            i = current+1;
+            if(i == 3){
+                current = 2;
+                i = 0;
+            }
+        $(".slide>ul").eq(current).css({left:0}).stop().animate({left:-1200});
+        $(".slide>ul").eq(i).css({left:1200}).stop().animate({left:0});
+        current = i;
+        }
+        setInterval(slide,3000);
+        
+        $(".cont3").click(function(){
+            $(".popup").show();
+            $(".box").show();            
+        });
+        $(".close").click(function(){
+            $(".popup").hide();
+            $(".box").hide();
+        });
+       
+        $(".cont1>ul>li").click(function(){
+           var ho = $(this).index();
+            console.log(ho);
+            $(".cont1>ul>li").removeClass();
+            $(this).addClass("active");
+            
+            $(".txt>li").hide();
+            $(".txt>li").eq(ho).show();
+        });
+    </script>
+</body>
+</html>
+
+
