@@ -16,9 +16,27 @@
             </div>
             <div id="main_menu">
                 <ul>
-                    <li>menu1</li>
-                    <li>menu2</li>
-                    <li>menu3</li>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">경기/강원</a></li>
+                                <li><a href="#">충청도</a></li>
+                                <li><a href="#">전라도</a></li>
+                                <li><a href="#">경상도</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">menu3</a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">동남아</a></li>
+                                <li><a href="#">남태평양</a></li>
+                                <li><a href="#">유럽</a></li>
+                                <li><a href="#">미주/중남미</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -61,6 +79,14 @@
             <div class="cont3"></div>
         </section>
         <footer id="footer"></footer>
+       
     </div>
+    <script>
+        $("#main_menu>ul>li").mouseover(function(){
+            $(this).find(".sub_menu").stop().slideDown(500)
+        }).mouseout(function(){
+            $(this).find(".sub_menu").hide()
+        });
+    </script>
 </body>
 </html>
