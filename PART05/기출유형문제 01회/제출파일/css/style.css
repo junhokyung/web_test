@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+#wrap{width: 1200px;margin: 0 auto;}
+/*header*/
+#header{width: 1200px;height: 100px;background-color: #444;}
+#logo{float: left;width: 200px;height: 100px;background-color: #fff;}
+#logo img{margin-top: 25px;}
+#main_menu{float: right;_width: 1000px;_height: 100px;margin-top: 50px;}
+#main_menu li{
+    width: 150px;height: 50px;float: left;
+    text-align: center;line-height: 50px;
+    background-color: pink;border-top:0; 
+    border: 1px solid #000;border-right:0; 
+    position: relative;
+}
+#main_menu li:hover{background-color: lightpink;}
+#main_menu li a{display: block;}
+.sub{z-index: 5;position: absolute;display: none;}
+/*banner*/
+#banner{}
+.slider{width: 1200px;height: 300px;
+    position: relative;overflow: hidden;}
+.slider ul{position: absolute;}
+.slider ul:nth-child(1){z-index: 3;}
+.slider ul:nth-child(2){z-index: 2;}
+
+
+/*contents*/
+#contents{width: 1200px;height: 200px;background-color: #222;}
+#contents > div{float: left;width: 400px;height: 200px;}
+.cont1{position: relative;}
+.tab_menu li{
+    width: 120px;height: 45px;float: left;background-color: pink;text-align: center;line-height: 45px;border-right:1px solid #000;}
+.tab_menu li a{display: block;}
+.card{width: 400px;height: 155px;background-color: pink;font-size:0.5em;position: absolute;left: 0;}
+.card2{width: 400px;height: 155px;background-color: pink;font-size:0.5em;position: absolute;left: 0;}
+.card2 img{float: left;width: 100px;height: 100px;background-color: hotpink;margin: 15px;}
+.cont1{background-color: #666;}
+.cont2{background-color: #777;}
+.cont3{background-color: #888;}
+.popup{width: 500px;height: 500px;background-color: pink;}
+/*footer*/
+#footer{width: 1200px;height: 100px;background-color: #111;}
+#footer > div{float: left;height: 100px;}
+.foot1{width: 200px;background-color: #999;}
+.foot2{width: 800px;background-color: #cdcdcd;}
+.foot3{width: 200px;background-color: #ddd;}

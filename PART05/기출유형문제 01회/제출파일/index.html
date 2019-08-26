@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lage="ko">
+<head>
+    <meta charset="utf-8">
+    <title>document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-1.12.3.js"></script>
+</head>
+<body>
+<div id="wrap">
+        <header id="header" class="clearfix">
+            <div id="logo">
+                <img src="images/LOGO.png" alt="">
+            </div>
+            <div id="main_menu">
+                <ul>
+                    <li><a href="#">탑</a>
+                        <div class="sub">
+                            <ul>
+                                <li><a href="#">블라우스</a></li>
+                                <li><a href="#">티</a></li>
+                                <li><a href="#">셔츠</a></li>
+                                <li><a href="#">니트</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">아우터</a>
+                         <div class="sub">
+                            <ul>
+                                <li><a href="#">자켓</a></li>
+                                <li><a href="#">코트</a></li>
+                                <li><a href="#">가디건</a></li>
+                                <li><a href="#">머플러</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">팬츠</a>
+                         <div class="sub">
+                            <ul>
+                                <li><a href="#">청바지</a></li>
+                                <li><a href="#">짧은바지</a></li>
+                                <li><a href="#">긴바지</a></li>
+                                <li><a href="#">레깅스</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">악세사리</a>
+                         <div class="sub">
+                            <ul>
+                                <li><a href="#">귀고리</a></li>
+                                <li><a href="#">목걸이</a></li>
+                                <li><a href="#">반지</a></li>
+                                <li><a href="#">팔찌</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section id="banner">
+            <div class="slider">
+                <ul>
+                    <li>
+                        <img src="images/img01.jpg" alt="">
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="images/img02.jpg" alt="">
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="images/img03.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="contents">
+            <div class="cont1">
+                <div class="tab_menu clearfix">
+                    <ul>
+                        <li>공지사항
+                            <ul class="card">
+                             <table>
+                                   <tr><a href="#">
+                                       <td>1.다도해 풍광을 한눈에...해남 땅끝 해안누리길 여행하기</td>
+                                       <td>2018-01-10</td></a>
+                                   </tr>
+                                   <tr>
+                                   <a href="#"><td>2.다도해 풍광을 한눈에...해남 땅끝 해안누리길 여행하기</td>
+                                       <td>2018-01-10</td></a>
+                                   </tr>
+                                   <tr><a href="#">
+                                       <td>3.다도해 풍광을 한눈에...해남 땅끝 해안누리길 여행하기</td>
+                                       <td>2018-01-10</td></a>
+                                   </tr>
+                               </table>
+                            </ul>
+                        </li>
+                        <li>갤러리
+                            <div class="card2">
+                                <a href="#"><img src="images/cont1-1.png" alt=""></a>
+                                <a href="#"><img src="images/cont2-2.png" alt=""></a>
+                                <a href="#"><img src="images/cont3-3.png" alt=""></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont2"></div>
+            <div class="cont3"></div>
+        </section>
+        <footer id="footer" class="clearfix">
+            <div class="foot1"></div>
+            <div class="foot2"></div>
+            <div class="foot3"></div>
+        </footer>
+        <div class="popup">
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur neque praesentium laudantium nobis, saepe accusamus? Eos consectetur commodi, laboriosam veritatis.</li>
+                </ul>
+            </div>
+    </div>
+    <script>
+        $("#main_menu>ul>li").mouseover(function(){
+            $(this).find(".sub").stop().slideDown();
+        }).mouseout(function(){
+            $(this).find(".sub").stop().slideUp()
+        });
+        
+        var current = 0;
+        var i;       
+       
+        function slider(){
+            i = current + 1;
+            if(i == 3){
+                current = 2;
+                i=0;
+            }            $(".slider>ul").eq(current).css({top:0}).stop().animate({top:-300});
+            $(".slider>ul").eq(i).css({top:300}).stop().animate({top:0});
+            current = i;
+        }
+        setInterval(slider,3000);
+        
+        
+        $(".tab_menu>li").click(function(){
+            var ho = $(this).index
+//            console.log(ho)
+            $(".tab_menu>li").eq(ho).addClass(card);
+            $(".tab_menu>li").eq(ho).removeClass(card2);
+            
+        });
+        
+    </script>
+</body>
+</html>
