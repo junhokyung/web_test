@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-#wrap{width: 1200px;margin: 0 auto;}
+#wrap{width: 1200px;margin: 0 auto;position: relative;}
+.box{display: none;width: 100%;height: 100%;background-color: #000;opacity: 0.5;position: absolute;top: 0;}
 /*header*/
 #header{width: 1200px;height: 100px;background-color: #444;}
 #logo{float: left;width: 200px;height: 100px;background-color: #fff;}
@@ -33,22 +34,34 @@
     width: 120px;height: 45px;float: left;background-color: pink;text-align: center;line-height: 45px;border-right:1px solid #000;}
 .tab_menu li a{display: block;}
 
-.card{width: 400px;height: 155px;background-color: pink;font-size:0.5em;position: absolute;left: 0;bottom: 0;}
+.card{width: 400px;height: 155px;background-color: pink;font-size:0.5em;position: absolute;left: 0;bottom: 0;display: block;}
 .card .img{position: absolute;top: 0;}
 .card img{float: left;width: 100px;height: 100px;background-color: hotpink;margin: 15px;}
 .card li{display: none;}
 .card li.active{display: block;}
 .tab_menu li.active{background-color: hotpink;color:#fff;}
-
 .tab_menu li:hover{background-color: hotpink;}
 
+.card tr{line-height: 30px;cursor: pointer}
+.card td{padding-right: 40px;}
+
 .cont1{background-color: #666;}
-.cont2{background-color: #777;}
-.cont3{background-color: #888;}
-.popup{width: 500px;height: 500px;background-color: pink;}
+.cont2{background-color: blue;}
+.cont3{background-color: skyblue;}
+
+/*popup*/
+.popup{display: none;width: 400px;height: 400px;background-color: pink;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 8;}
+.popup h1{font-weight: bold;}
+.popup h1:after{content: "";display: block;width: 400px;height: 2px;background-color: #000;}
+.popup .close{position: absolute;right: 0;bottom: 0;width:50px;height: 30px;border: 1px solid #000;text-align: center;line-height: 30px;}
+.popup .close a{display: block;}
+.popup .close:hover{background-color: hotpink;}
+/*.click{display: block;}*/
+
 /*footer*/
-#footer{width: 1200px;height: 100px;background-color: #111;}
+#footer{width: 1200px;height: 100px;background-color: #111;margin: 0 auto;}
 #footer > div{float: left;height: 100px;}
 .foot1{width: 200px;background-color: #999;}
+.foot1{padding-top:25px;}
 .foot2{width: 800px;background-color: #cdcdcd;}
 .foot3{width: 200px;background-color: #ddd;}

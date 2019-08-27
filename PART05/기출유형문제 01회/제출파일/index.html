@@ -89,9 +89,11 @@
                      <ul>
                         <li class="active">
                              <table>
-                                   <tr><a href="#">
+                                   <tr class="click">
+                                      <a href="#">
                                        <td>1.다도해 풍광을 한눈에...해남 땅끝 해안누리길 여행하기</td>
-                                       <td>2018-01-10</td></a>
+                                       <td>2018-01-10</td>
+                                       </a>
                                    </tr>
                                    <tr>
                                    <a href="#"><td>2.다도해 풍광을 한눈에...해남 땅끝 해안누리길 여행하기</td>
@@ -112,22 +114,30 @@
                         </li>
                     </ul>
                 </div>    
-         
             </div>
             <div class="cont2"></div>
             <div class="cont3"></div>
         </section>
-        <footer id="footer" class="clearfix">
-            <div class="foot1"></div>
-            <div class="foot2"></div>
-            <div class="foot3"></div>
-        </footer>
         <div class="popup">
                 <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur neque praesentium laudantium nobis, saepe accusamus? Eos consectetur commodi, laboriosam veritatis.</li>
+                    <li>
+                    <h1>타이틀</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur neque praesentium laudantium nobis, saepe accusamus? Eos consectetur commodi, laboriosam veritatis.</p></li>
                 </ul>
+                <div class="close"><a href="#">닫기</a></div>
             </div>
-    </div>
+        <footer id="footer" class="clearfix">
+            <div class="foot1">
+                <img src="images/ft_LOGO.png" alt="">
+            </div>
+            <div class="foot2">
+                copyright
+            </div>
+            <div class="foot3">
+                sns
+            </div>
+        </footer>
+        <div class="box"></div>
     <script>
         $("#main_menu>ul>li").mouseover(function(){
             $(this).find(".sub").stop().slideDown();
@@ -162,6 +172,14 @@
 //            $(".card li").eq(ho).show();
         });
         
+        $(".click").click(function(){
+            $(".popup").show();
+            $(".box").show();
+        });
+        $(".close").click(function(){
+            $(".popup").hide();
+            $(".box").hide();
+        });
     </script>
 </body>
 </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lage="ko">
+<head>
+    <meta charset="utf-8">
+    <title>document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery.min_1.12.4.js"></script>
+</head>
+<body>
+<div class="wrap">
+        <header id="header" class="clearfix">
+            <div id="logo"></div>
+            <ul class="sub_box"></ul>
+            <div id="main_menu" class="clearfix">
+                <ul>
+                    <li><a href="#">menu1</a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">menu1</a></li>
+                                <li><a href="#">menu2</a></li>
+                                <li><a href="#">menu3</a></li>
+                                <li><a href="#">menu4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">menu2</a>
+                         <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">menu1</a></li>
+                                <li><a href="#">menu2</a></li>
+                                <li><a href="#">menu3</a></li>
+                                <li><a href="#">menu4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">menu3</a>
+                         <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">menu1</a></li>
+                                <li><a href="#">menu2</a></li>
+                                <li><a href="#">menu3</a></li>
+                                <li><a href="#">menu4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">menu4</a>
+                         <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">menu1</a></li>
+                                <li><a href="#">menu2</a></li>
+                                <li><a href="#">menu3</a></li>
+                                <li><a href="#">menu4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section id="banner">
+            <div class="slider">
+                <li><a href="#"><img src="images/img01.jpg" alt="slide1"></a></li>
+                <li><a href="#"><img src="images/img02.jpg" alt="slide2"></a></li>
+                <li><a href="#"><img src="images/img03.jpg" alt="slide3"></a></li>
+            </div>
+        </section>
+        <section id="contents" class="clearfix">
+            <div class="cont1"></div>
+            <div class="cont2"></div>
+            <div class="cont3"></div>
+        </section>
+        <footer id="footer" class="clearfix">
+            <div class="foot1"></div>
+            <div class="foot2"></div>
+            <div class="foot3"></div>
+        </footer>
+    </div>
+    <script>
+        $("#main_menu li").mouseenter(function(){
+            $(".sub_menu").stop().slideDown()
+            $(".sub_box").stop().slideDown()
+        }).mouseleave(function(){
+            $(".sub_menu").stop().slideUp();
+            $(".sub_box").stop().slideUp();
+        });
+        
+        var current = 0;
+        var i;
+        
+        function slider(){
+            i = current+1
+            if(i == 3){
+                current = 2;
+                i = 0;
+            }
+            console.log(i);
+            $(".slider li").eq(current).css({left:0}).stop().animate({left:-1200});
+            $(".slider li").eq(i).css({left:1200}).stop().animate({left:0});
+            current = i
+        }
+        setInterval(slider,3000)
+    </script>
+</body>
+</html>
