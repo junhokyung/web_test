@@ -81,8 +81,13 @@
             <div class="cont1">
                 <div class="tab_menu clearfix">
                     <ul>
-                        <li>공지사항
-                            <ul class="card">
+                        <li class="active">공지사항</li>
+                        <li>갤러리</li>
+                    </ul>
+                </div>
+                    <div class="card">
+                     <ul>
+                        <li class="active">
                              <table>
                                    <tr><a href="#">
                                        <td>1.다도해 풍광을 한눈에...해남 땅끝 해안누리길 여행하기</td>
@@ -96,18 +101,18 @@
                                        <td>3.다도해 풍광을 한눈에...해남 땅끝 해안누리길 여행하기</td>
                                        <td>2018-01-10</td></a>
                                    </tr>
-                               </table>
-                            </ul>
-                        </li>
-                        <li>갤러리
-                            <div class="card2">
-                                <a href="#"><img src="images/cont1-1.png" alt=""></a>
-                                <a href="#"><img src="images/cont2-2.png" alt=""></a>
-                                <a href="#"><img src="images/cont3-3.png" alt=""></a>
-                            </div>
+                              </table>
+                         </li>
+                     </ul>
+                     <ul>
+                        <li class="img">
+                            <a href="#"><img src="images/cont1-1.png" alt=""></a>
+                            <a href="#"><img src="images/cont2-2.png" alt=""></a>
+                            <a href="#"><img src="images/cont3-3.png" alt=""></a>
                         </li>
                     </ul>
-                </div>
+                </div>    
+         
             </div>
             <div class="cont2"></div>
             <div class="cont3"></div>
@@ -144,13 +149,17 @@
         }
         setInterval(slider,3000);
         
-        
-        $(".tab_menu>li").click(function(){
-            var ho = $(this).index
-//            console.log(ho)
-            $(".tab_menu>li").eq(ho).addClass(card);
-            $(".tab_menu>li").eq(ho).removeClass(card2);
+//        $(".card li").eq(0).show();
+        $(".tab_menu li").click(function(){
+            var ho = $(this).index();
+            console.log(ho)
+           $(".tab_menu li").removeClass("active");
+            $(".tab_menu li").eq(ho).addClass("active");
+            $(".card li").removeClass("active");
+            $(".card li").eq(ho).addClass("active")
             
+//            $(".card li").hide();
+//            $(".card li").eq(ho).show();
         });
         
     </script>
