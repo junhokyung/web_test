@@ -76,44 +76,60 @@
             <div class="cont1">
                 <div class="tab_menu">
                     <div class="t_btn">
-                        <p>공지사항</p>
-                        <p>갤러리</p>
+                        <p class="active"><a href="javascript:void(0)">공지사항</a></p>
+                        <p><a href="javascript:void(0)">갤러리</a></p>
                     </div>
                     <div class="t_cont">
-                        <table>
-                            <tr>menu
-                                <td>menu,menu</td>
-                                <td>202020.202020</td>
-                            </tr>
-                            <tr>menu
-                                <td>menu,menu</td>
-                                <td>202020.202020</td>
-                            </tr>
-                            <tr>menu
-                                <td>menu,menu</td>
-                                <td>202020.202020</td>
-                            </tr>
-                            <tr>menu
-                                <td>menu,menu</td>
-                                <td>202020.202020</td>
-                            </tr>
-                        </table>
-                        <ul>
-                            <img src="images/cont1.png" alt="">
-                            <img src="images/cont2.png" alt="">
-                            <img src="images/cont3.png." alt="">
-                        </ul>
+                       <li class="active">
+                            <table>
+                                <tr class="click">
+                                    <td><a href="#">menu,menu</a></td>
+                                    <td>202020.202020</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">menu,menu</a></td>
+                                    <td>202020.202020</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">menu,menu</a></td>
+                                    <td>202020.202020</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">menu,menu</a></td>
+                                    <td>202020.202020</td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <ul class="t_img">
+                                <a href="#"><img src="images/cont1.png" alt="cont1"></a>
+                                <a href="#"><img src="images/cont2.png" alt="cont2"></a>
+                                <a href="#"><img src="images/cont3.png" alt="cont3"></a>
+                            </ul>
+                        </li>
                     </div>
                 </div>
             </div>
-            <div class="cont2"></div>
+            <div class="cont2">
+                <li><a href="#"><img src="images/cont1.png" alt=""></a></li>
+                <li><a href="#"><img src="images/cont2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/cont3.png" alt=""></a></li>
+            </div>
             <div class="cont3"></div>
         </section>
+        <div class="popup">
+                    <h1>타이틀</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quibusdam, nulla fugit. Nisi rem, fugit, doloremque odio exercitationem reiciendis. Totam!</p>
+                    <div class="close"><a href="#">닫기</a></div>
+             </div>
         <footer id="footer" class="clearfix">
-            <div class="foot1"></div>
-            <div class="foot2"></div>
-            <div class="foot3"></div>
+            <div class="foot1">
+                <img src="images/ft_logo.png" alt="">
+            </div>
+            <div class="foot2"><a href="#">copyright</a></div>
+            <div class="foot3"><a href="#">sns</a></div>
         </footer>
+        <div class="box"></div>
     </div>
     <script>
         $("#main_menu li").mouseenter(function(){
@@ -139,6 +155,24 @@
             current = i
         }
         setInterval(slider,3000)
+        
+        $(".t_btn p").click(function(){
+            var ho = $(this).index();
+            
+            $(".t_btn p").removeClass("active")
+            $(".t_btn p").eq(ho).addClass("active")
+            
+            $(".t_cont li").removeClass("active")
+            $(".t_cont li").eq(ho).addClass("active")
+        });
+        $(".click").click(function(){
+            $(".popup").show();
+            $(".box").show();
+        })
+        $(".close").click(function(){
+            $(".popup").hide();
+            $(".box").hide();
+        })
     </script>
 </body>
 </html>
