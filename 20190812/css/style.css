@@ -29,7 +29,18 @@ img{display: block;}
 
 
 #contnets{height: 200px;background: 333px;}
-.cont1{float: left;width: 400px;height: 200px;background: pink;}
+.cont1{float: left;width: 400px;height: 200px;background: pink;position: relative;}
+.t_menu li{float: left;width: 150px;height: 40px;background-color: #fff;text-align: center;line-height: 40px;}
+.t_menu li:hover{background-color: mistyrose;}
+.t_menu li a{display: block;}
+.t_menu li.active{background-color: mistyrose;}
+.t_cont{width: 400px;height: 160px;background-color: mistyrose;}
+.t_cont li{display: none;}
+.t_cont li.active{display: block;}
+.pa{position: absolute;bottom: 0;height: 160px;}
+
+
+
 .cont2{float: left;width: 400px;height: 200px;background: deeppink;}
 .cont3{float: left;width: 400px;height: 200px;background: pink;}
 

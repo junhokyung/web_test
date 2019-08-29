@@ -70,6 +70,17 @@
         $(".menu>ul>li").mouseout(function(){
            $(this).find(".sub_menu1").stop().slideUp();
         });
+        
+        $(".t_menu li").click(function(){
+            var ho = $(this).index();
+            $(".t_menu li").removeClass("active");
+            $(".t_menu li").eq(ho).addClass("active");
+            
+            $(".t_cont li").removeClass("active");
+            $(".t_cont li").eq(ho).addClass("active");
+        })
+        
+        
 	});
 	
 
@@ -115,13 +126,52 @@
             </div>
         </section>
         <section id="contents" class="clearfix">
-            <div class="cont1">공지사항</div>
+            <div class="cont1">
+                <div class="t_menu clearfix">
+                     <li class="active"><a href="javascript:void(0)">이제</a></li>
+                     <li><a href="javascript:void(0)">그만</a></li>
+                </div>
+                <div class="t_cont">
+                    <li class="active">
+                        <table>
+                            <tr>
+                                <td>gggggggg</td>
+                                <td>gggggggg</td>
+                            </tr>
+                            <tr>
+                                <td>gggggggg</td>
+                                <td>gggggggg</td>
+                            </tr>
+                            <tr>
+                                <td>gggggggg</td>
+                                <td>gggggggg</td>
+                            </tr>
+                            <tr>
+                                <td>gggggggg</td>
+                                <td>gggggggg</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                       <ul class="pa"> 안녕클레오파트라 세상에서 제일가는 포테이토칩
+                            안녕클레오파트라 세상에서 제일가는 포테이토칩
+                            안녕클레오파트라 세상에서 제일가는 포테이토칩
+                            안녕클레오파트라 세상에서 제일가는 포테이토칩</ul>
+                    </li>
+                </div>
+            </div>
             <div class="cont2">갤러리</div>
             <div class="cont3">팝업</div>
         </section>
         <div id="footer" class="clearfix">
             <div class="foot1">LOGO</div>
-            <div class="foot2">COPY</div>
+            <div class="foot2">COPY
+                <select>
+                    <option value="호경이">호경이</option>
+                    <option value="안녕">안녕</option>
+                    <option value="히">히</option>
+                </select>
+            </div>
             <div class="foot3">SNS</div>
         </div>
     </div>
