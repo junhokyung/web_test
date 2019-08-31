@@ -23,7 +23,7 @@
 div.s_box{display: none;width: 180px;height: 250px;background-color: #00177c;top: 0;z-index: 4;}
 
 /*banner*/
-#banner{width: 800px;height: 350px;background-color: #888;float: left;position: relative;overflow: hidden}
+#banner{width: 800px;height: 350px;float: left;position: relative;overflow: hidden}
 #banner li{position: absolute;top: 0;}
 #banner li:nth-child(1){z-index: 3;}
 #banner li:nth-child(2){z-index: 2;}
@@ -33,7 +33,7 @@ div.s_box{display: none;width: 180px;height: 250px;background-color: #00177c;top
 #contents{width: 800px;height: 200px;float: left;}
 #contents>div{width: 266.67px;height: 200px;float: left;}
 .cont1{position: relative;}
-.t_menu h1{float: left;width: 120px;height: 40px;background-color: #950000;font-size: 20px;text-align: center;line-height: 40px;}
+.t_menu h1{float: left;width: 120px;height: 40px;_background-color: #950000;font-size: 20px;text-align: center;line-height: 40px;}
 .t_menu h1:hover{background-color: #00177c;}
 .t_menu h1 a{display: block;}
 .t_menu h1.active{background-color: #00177c;}
