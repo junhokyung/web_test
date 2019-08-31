@@ -29,9 +29,9 @@
 #banner li:nth-child(1){z-index: 3;}
 #banner li:nth-child(2){z-index: 2;}
 /*contents*/
-#contents{height: 200px;background-color: #777;}
+#contents{height: 200px;}
 #contents>div{width: 400px;float: left;height: 200px;}
-.cont1{_background-color: #555;position: relative;}
+.cont1{position: relative;}
 .cont1 h1{
     width: 150px;height: 40px;background-color: #5b9bd5;
     float: left;text-align: center;line-height: 40px;}
@@ -57,13 +57,20 @@
 .close:hover{background-color: #ffc000;}
 .close a{display: block;}
 
-.cont2{background-color: #444;}
-.cont3{background-color: #333;}
+.cont2{padding: 10px;}
+.cont2 a{float: left;width: 70px;height: 70px;background-color: #444;margin: 20px  20px 20px 30px;padding: 5px;}
+.cont2 a:hover img{opacity: 0.5;transition: 0.3s;}
+.cont3{padding: 10px;}
+.cont3 a{float: left;}
+.cont3 a img{width: 150px;padding-right: 20px;margin: 30px 20px;}
 
 /*footer*/
-#footer{height: 100px;background-color: #666;}
-#footer>div{float: left;height: 100px;}
-.up{width: 1000px;height: 50px;background-color: #666;}
-.down{width: 1000px;height: 50px;background-color: #888;}
-.foot2{width: 200px;background-color: #777;}
-.foot2 select{width: 100px;height: 30px;}
+#footer{height: 100px;_background-color: #666;}
+#footer>div{float: left;height: 100px;float: left;}
+.up{width: 1000px;height: 50px;text-align: center;}
+.up a{padding-right: 20px;line-height: 50px;}
+
+.down{width: 1000px;height: 50px;text-align: center;}
+.down a{font-size: 13px;}
+.foot2{width: 200px;padding: 25px;}
+.foot2 select{width: 150px;height: 40px;}
