@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+
+.wrap{width: 1200px;_background-color: #fff;margin: 0 auto;}
+
+/*header*/
+#header{height: 100px;width: 100%;border-bottom: 3px solid #e66b27;}
+.header_wrap>div{height: 100px;float: left;}
+.header_wrap{width: 1200px;margin: 0 auto;background-color: #888;}
+.logo{width: 20%;}
+.logo img{padding-top: 25px;}
+.main_menu{width: 80%;}
+.main_menu>ul{margin: 50px 10px;float: right;}
+.main_menu>ul>li{
+    width: 120px;float: left;height: 40px;
+    background-color: #0076be;
+    text-align: center;line-height: 40px;
+    position: relative;
+}
+.main_menu li:hover{background-color: #e66b27;}
+.main_menu li a{display: block;}
+
+.sub_menu{display: none;position: absolute;z-index: 4;background-color: #0076be;width: 120px;}
+
+/*banner*/
+#banner{height: 300px;position: relative;overflow: hidden} 
+#banner li{position: absolute;}
+#banner li:nth-child(1){z-index: 3;}
+#banner li:nth-child(2){z-index: 2;}
+#banner h1{
+    position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 200px;line-height: 60px;
+    border: 3px solid #0076be;border-radius: 30px;text-align: center;
+    background-color: rgba(0,0,0,0.3);color:aliceblue;
+}
+
+/*contents*/
+#contents{height: 200px;}
+#contents>div{width: 400px;float: left;height: 200px;}
+.cont1{position: relative;}
+.t_menu h1{width: 150px;background-color: #e66b27;float: left;font-size: 20px;text-align: center;line-height: 40px;margin-left: 10px;}
+.t_menu h1:last-child{margin: 0;}
+.t_menu h1:hover{background-color: #0076be;}
+.t_menu h1 a{display: block;}
+.t_cont{position: absolute;bottom: 0;background-color: #0076be;width: 400px;height: 160px;}
+.t_cont table{font-size: 14px;padding: 10px;}
+.t_img{position: absolute;top: 0;padding: 10px;}
+.t_img ul{float: left;padding-right: 40px;padding-top: 20px;}
+.t_img ul:last-child{padding-right:0;}
+.t_img img{width: 100px;}
+.t_menu h1.active{background-color: #0076be;}
+.t_cont li{display: none;}
+.t_cont li.active{display: block;}
+.t_cont li td{padding-top: 5px;}
+
+.cont2{background-color: #555;}
+.cont3{background-color: #444;}
+
+/*footer*/
+#footer{height: 100px;width: 100%;}
+#footer>div{float: left;height: 100px;}
+.ft_logo{background-color: #333;width: 20%;}
+.ft_cont{width: 80%;}
+.up{height: 50px;background-color: #999;}
+.down{height: 50px;background-color: #888;}
