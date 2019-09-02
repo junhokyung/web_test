@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-
+ 
 .wrap{width: 1200px;_background-color: #fff;margin: 0 auto;}
 
 /*header*/
@@ -55,9 +55,14 @@
 .cont2{background-color: #555;}
 .cont3{background-color: #444;}
 
+.popup{display: none;position: absolute;width: 450px;height: 450px;background-color: #0076be;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 8;padding: 10px;}
+.popup p{padding: 50px;}
+.close{position: absolute;right:20px;bottom: 20px;width: 70px;_height: 35px;border: 1px solid #e66b27;text-align: center;line-height: 35px;cursor: pointer;}
+
 /*footer*/
-#footer{height: 100px;width: 100%;}
-#footer>div{float: left;height: 100px;}
+#footer{height: 100px;width: 100%;border-top: 3px solid #0076be;}
+.ft_wrap>div{float: left;height: 100px;}
+.ft_wrap{width: 1200px;margin: 0 auto;}
 .ft_logo{background-color: #333;width: 20%;}
 .ft_cont{width: 80%;}
 .up{height: 50px;background-color: #999;}

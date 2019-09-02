@@ -21,7 +21,22 @@ $(function(){
     }
     setInterval(slider,3000);
     
-//    $(".t_menu li").
+    
+    $(".t_menu h1").click(function(){
+       var ho = $(this).index();
+        $(".t_menu h1").removeClass("active");
+        $(".t_menu h1").eq(ho).addClass("active");
+        
+        $(".t_cont li").removeClass("active");
+        $(".t_cont li").eq(ho).addClass("active");
+    });
+    
+    $(".click").click(function(){
+        $(".popup").show();
+    });
+    $(".close").click(function(){
+        $(".popup").hide();
+    });
 });
 
 
