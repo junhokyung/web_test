@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/*h_wrap*/
+#h_wrap{width: 100%;height: 100px;border-bottom: 2px solid #4a4948;}
+
+/*header*/
+#header{width: 1200px;margin: 0 auto;height: 100px;}
+#header>div{float: left;height: 100px;}
+.logo{width: 200px;}
+.logo img{width: 200px;padding-top: 20px;}
+.main_menu{width: 1000px;}
+.main_menu ul{float: right;padding-top: 25px;margin-right: 20px;}
+.main_menu li{
+    float: left;width: 120px;line-height: 50px;
+    background-color: #caac7d;
+    text-align: center;position: relative;
+}
+.main_menu li:hover{background-color: #4a4948;}
+.main_menu li a{display: block;}
+.sub_menu{position: absolute;top: 25px;z-index: 4;display: none;}
+
+/*wrap*/
+#wrap{width: 1200px;margin: 0 auto;position: relative;}
+
+/*banner*/
+#banner{height: 300px;position: relative;overflow: hidden;}
+#banner li{position: absolute;top: 0;}
+#banner li:nth-child(1){z-index: 3;}
+#banner li:nth-child(2){z-index: 2;}
+#banner h2{
+    position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 180px;line-height: 80px;
+    text-align: center;background-color:rgba(255,255,255,0.5);border-radius: 40px;    
+}
+
+/*contents*/
+#contents{height: 200px;}
+#contents>div{width: 33.33%;height: 200px;float: left;position: relative;}
+.cont1{}
+.cont2{background-color: #444;}
+.cont3{background-color: #555;}
+
+.cont1 .t_menu{background-color: #4a4948;}
+.cont1 .t_cont{background-color: #4a4948;}
+.t_menu{width: 120px;line-height: 40px;font-size: 15px;text-align: center;border-radius: 20px 20px 0 0;margin-left: 10px;}
+.t_cont{width:100%;height: 160px;position: absolute;bottom: 0;}
+table{font-size: 14px;}
+td{padding-top: 10px;}
+
+.cont2 .t_menu{background-color: #caac7d;}
+.cont2 .t_cont{background-color: #caac7d;}
+.cont2 .t_cont a{display: block;}
+
+.popup{display: none;width: 500px;height: 500px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);background-color: #cdcdcd;z-index: 6;}
+.close{position: absolute;right: 20px;bottom: 20px;}
+
+/*f_wrap*/
+#f_wrap{width: 100%;height: 100px;border-top: 2px solid #caac7d;}
+
+/*footer*/
+#footer{width: 1200px;margin: 0 auto;height: 100px;background-color: #555;}
+#footer>div{float: left;height: 100px;}
+.foot1{background-color: #666;width: 200px;}
+.foot2{background-color: #777;width: 800px;}
+.foot3{background-color: #888;width: 200px;}
