@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.wrapper{width: 1000px;margin: 0 auto;}
+.wrapper{width: 1000px;margin: 0 auto;font-family: gungsuh;}
 
 #aside{width: 200px;height: 650px;background-color: #999;float: left;}
 .logo{height: 100px;background-color: #fff;}
@@ -12,13 +12,13 @@
 .main_menu>ul>li:hover{background-color: #ffc000;}
 .main_menu li a{display: block;}
 
-.sub_menu{display: none;
+.sub_menu{display: none;height: 250px;
     position: absolute;left:180px;top: -50px;width: 180px;
     background-color: #ffc000;z-index: 5;overflow: hidden;
 }
 .sub_menu li{height: 50px;}
 .sub_menu li:hover{background-color: #00a2ff;}
-.s_box{width: 180px;height: 50px;background-color: #ffc000;}
+/*.s_box{width: 180px;height: 50px;background-color: #ffc000;}*/
 
 #wrap{width: 800px;height: 650px;background-color: #888;float: left;}
 

@@ -20,7 +20,7 @@
 .main_menu li:hover{background-color: #e66b27;}
 .main_menu li a{display: block;}
 
-.sub_menu{display: none;position: absolute;z-index: 4;background-color: #0076be;width: 120px;}
+.sub_menu{display: none;position: absolute;z-index: 4;background-color: #0076be;width: 120px;height: 200px;}
 
 /*banner*/
 #banner{height: 300px;position: relative;overflow: hidden} 

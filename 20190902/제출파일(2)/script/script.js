@@ -1,10 +1,10 @@
 $(function(){
    $(".main_menu>ul>li").mouseover(function(){
        $(this).find(".sub_menu").stop().slideDown();
-       $(".s_box").stop().slideDown();
+       $(this).find(".s_box").stop().slideDown();
    }).mouseout(function(){
        $(this).find(".sub_menu").stop().slideUp();
-       $(".s_box").stop().slideUp();
+       $(this).find(".s_box").stop().slideUp();
    });
     
     
