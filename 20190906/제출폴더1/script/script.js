@@ -12,7 +12,7 @@ $(function(){
     
     function slider(){
         i=(current+1)%3;
-        
+        console.log(i)
         $("#banner a").eq(current).css({left:0}).animate({left:-1200});
         $("#banner a").eq(i).css({left:1200}).animate({left:0});
         
@@ -23,7 +23,7 @@ $(function(){
     $(".t_menu h2").click(function(){
         
         var click =$(this).index();
-        
+        console.log(click)
         $(".t_menu h2").removeClass("active");
         $(".t_menu h2").eq(click).addClass("active");
         
