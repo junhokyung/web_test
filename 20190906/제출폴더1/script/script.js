@@ -40,3 +40,15 @@ $(function(){
         $(".box").hide();
     });
 });
+
+$(document).ready(function(){
+    var cnt = 0;
+    $(".box").mousemove(function(e){
+        // cnt++;
+        // if(cnt%10 == 0){
+            console.log(e.pageX+","+e.pageY);
+            // $("#dis1").animate({"left":e.pageX, "top":e.pageY},100);
+            $("#dis1").animate({"left":e.pageX+20, "top":e.pageY+20});
+        // }
+    })
+})
